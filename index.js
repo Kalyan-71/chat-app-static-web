@@ -1,6 +1,6 @@
 import express from "express"
 import http from "http";
-import { WebSocketServer } from "ws";
+import { WebSocketServer, WebSocket } from "ws";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config({
@@ -60,6 +60,6 @@ wss.on("connection", (ws) => {
 });
 
 
-app.listen(8000 , ()=>{
+server.listen(8000 , ()=>{
     console.log("server running on port 8000");
 })
